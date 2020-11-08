@@ -62,6 +62,7 @@ class SearchViewController: UIViewController {
     
     func clearSearchResult() {
         self.arrayInfomation = []
+        self.userTableview.reloadData()
     }
     
     func setUpTableView() {
