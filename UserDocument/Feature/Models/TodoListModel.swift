@@ -7,8 +7,15 @@
 
 import Foundation
 
-struct TodoListModel : Codable {
-    let todo : [TodoModel]
-    let user : [UserModel]
+struct TodoListModel : Decodable {
+    var todo : [TodoModel]
+    var user : [UserModel]
+
+//    enum CodingKeys: String, CodingKey {
+//        case todo = "todo"
+//        case user = "user"
+//    }
+
+
 }
 

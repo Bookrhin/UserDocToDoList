@@ -6,9 +6,13 @@
 //
 
 import UIKit
-
+import Kingfisher
 class UserTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var userImg: UIImageView!
+    @IBOutlet weak var userNameLb: UILabel!
+    @IBOutlet weak var dateLb: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +22,12 @@ class UserTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setUpCell(userName: String, date: String, userImg: String) {
+        self.userImg.kf.setImage(with: URL(string: userImg))
+        self.userNameLb.text = userName
+        self.dateLb.text = date
     }
     
 }

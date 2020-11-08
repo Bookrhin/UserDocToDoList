@@ -6,10 +6,10 @@
 //
 
 import Foundation
-struct TodoModel : Codable {
-    let id: String
-    let title: String
-    let description: String
-    let userId: String
-    let createdAt: String
+struct TodoModel : Decodable {
+    var id: String
+    var title: String
+    var description: String
+    var userId: String
+    var createdAt: String
 }

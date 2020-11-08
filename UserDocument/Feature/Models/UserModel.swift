@@ -6,8 +6,8 @@
 //
 
 import Foundation
-struct UserModel : Codable {
-    let id : String
-    let name: String
-    let avater: URL
+struct UserModel : Decodable {
+    var id : String
+    var name: String
+    var avatar: String
 }
