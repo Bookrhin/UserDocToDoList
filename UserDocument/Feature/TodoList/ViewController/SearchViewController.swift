@@ -51,7 +51,7 @@ class SearchViewController: UIViewController {
             .asDriver(onErrorJustReturn: nil)
             .drive(onNext: { [weak self] (text) in
                 guard let self = self else {return}
-                guard let text = text, text.count >= 0 else {
+                guard let text = text , !text.isEmpty else {
                     self.clearSearchResult()
                     return
                 }
